@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay Music Studio | School & Production</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #d4af37;
+            --dark-bg: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --text-light: #f4f4f4;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
+        body { background-color: var(--dark-bg); color: var(--text-light); line-height: 1.6; }
+
+        /* --- Navigation --- */
+        nav {
+            background: rgba(0, 0, 0, 0.95);
+            padding: 15px 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--primary-gold);
+        }
+        
+        /* LOGO STYLING */
+        .logo img { height: 50px; width: auto; display: block; }
+        .logo-text { font-family: 'Playfair Display', serif; color: var(--primary-gold); font-size: 1.5rem; font-weight: bold; text-decoration: none; }
+
+        nav ul { display: flex; list-style: none; align-items: center; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { color: white; text-decoration: none; font-size: 0.85rem; text-transform: uppercase; transition: 0.3s; font-weight: 700; }
+        nav ul li a:hover { color: var(--primary-gold); }
+
+        /* --- Hero Section --- */
+        header {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
+                        url('music-studio-background.jpg') center/cover;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px;
+        }
+        h1 { font-family: 'Playfair Display', serif; font-size: 4rem; color: var(--primary-gold); margin-bottom: 10px; }
+        .cta-button {
+            background-color: var(--primary-gold); color: black; padding: 18px 45px;
+            text-decoration: none; font-weight: bold; border-radius: 50px; transition: 0.3s;
+            text-transform: uppercase; margin-top: 20px; display: inline-block;
+        }
+        .cta-button:hover { background-color: #fff; transform: scale(1.05); }
+
+        /* --- Sections --- */
+        .section { padding: 100px 5% 60px; text-align: center; }
+        h2 { font-size: 2.5rem; margin-bottom: 40px; color: var(--primary-gold); text-transform: uppercase; letter-spacing: 2px; }
+        h3 { color: var(--primary-gold); margin-bottom: 15px; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+
+        .card { background: var(--card-bg); border-radius: 15px; overflow: hidden; border: 1px solid #333; transition: 0.3s; text-align: left; }
+        .card:hover { border-color: var(--primary-gold); transform: translateY(-5px); }
+        .card img { width: 100%; height: 220px; object-fit: cover; }
+        .card-content { padding: 25px; }
+        .price { color: var(--primary-gold); font-weight: bold; font-size: 1.2rem; display: block; margin-top: 10px; }
+
+        /* --- Price List Image Style --- */
+        .price-list-container { margin-top: 40px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .price-list-img { width: 100%; border-radius: 15px; border: 2px solid var(--primary-gold); }
+
+        /* --- Production Details --- */
+        .details-box {
+            background: #111; padding: 40px; border-radius: 15px; text-align: left; 
+            margin-top: 30px; border-left: 5px solid var(--primary-gold);
+        }
+        .details-box ul { list-style: none; }
+        .details-box li { margin-bottom: 10px; border-bottom: 1px solid #222; padding-bottom: 5px; }
+        .note { font-style: italic; font-size: 0.9rem; color: #aaa; margin-top: 20px; background: #222; padding: 10px; border-radius: 5px; }
+
+        /* --- Contact --- */
+        .contact-box { background: var(--card-bg); padding: 40px; border-radius: 20px; margin-top: 30px; border: 1px solid #333; }
+        .email-link { color: var(--primary-gold); text-decoration: none; font-weight: bold; }
+        footer { padding: 40px; text-align: center; border-top: 1px solid #222; margin-top: 50px; color: #666; }
+
+        @media (max-width: 768px) { 
+            h1 { font-size: 2.2rem; }
+            nav ul { display: none; } /* Navigation hides on mobile for simplicity */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+           <img src="Studio (Logo).png" alt="Jay Music Studio" style="height:150px;">
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#training">Training</a></li>
+            <li><a href="#production">Production</a></li>
+            <li><a href="#dj-services">DJ Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Jay Music Studio</h1>
+        <p>Premium Music School • Professional Recording • DJ Services</p>
+        <a href="http://wa.me/+2347062881957" target="_blank" class="cta-button">Book Your Session</a>
+    </header>
+
+    <section id="training" class="section">
+        <h2>Music School Training</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="my-studio.jpg" alt="Piano">
+                <div class="card-content">
+                    <h3>Piano Training</h3>
+                    <p>Master the keys with classical and contemporary techniques.</p>
+                    <span class="price">#25,000 / Month</span>
+                </div>
+            </div>
+            <div class="card">
+                <img src="vocal-training.jpg" alt="Vocal">
+                <div class="card-content">
+                    <h3>Vocal Training</h3>
+                    <p>Voice control, breathing techniques, and performance mastery.</p>
+                    <span class="price">#25,000 / Month</span>
+                </div>
+            </div>
+            <div class="card">
+                <img src="my-guitarstudio.jpg" alt="Guitar">
+                <div class="card-content">
+                    <h3>Guitar (Acoustic/Electric)</h3>
+                    <p>Learn chords, solos, and rhythm patterns.</p>
+                    <span class="price">#30,000 / Month</span>
+                </div>
+            </div>
+            <div class="card">
+                <img src="my-saxstudio.jpg" alt="Sax">
+                <div class="card-content">
+                    <h3>Saxophone</h3>
+                    <p>Develop your tone and jazz improvisation skills.</p>
+                    <span class="price">#30,000 / Month</span>
+                </div>
+            </div>
+            <div class="card">
+                <img src="bass-guitar-6325873_1280.jpg" alt="Bass">
+                <div class="card-content">
+                    <h3>Bass Guitar</h3>
+                    <p>The heartbeat of the band. Master the groove.</p>
+                    <span class="price">#35,000 / Month</span>
+                </div>
+            </div>
+            <div class="card">
+                <img src="gangan-studio.jpg" alt="Gangan">
+                <div class="card-content">
+                    <h3>African Talking Drum (Gangan)</h3>
+                    <p>Master the cultural art of communication through rhythm.</p>
+                    <span class="price">#30,000 / Month</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="price-list-container">
+            <h3>Our Official Price List</h3>
+            <img src="music-list.jpg" alt="Price List" class="price-list-img">
+            
+        </div>
+    </section>
+
+    <section id="production" class="section" style="background:#050505;">
+        <h2>Production & Sessions</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-content">
+                    <h3>Digital Beat Production</h3>
+                    <p>Pop, Hip-Hop, Afro-pop, Gospel, R&B, Trap, etc. Includes Voice Recording.</p>
+                    <span class="price">#100,000 per song</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Analogue Infusion</h3>
+                    <p>Digital beat with Analogue infusion (Excludes instrumentalist fee).</p>
+                    <span class="price">#130,000 per song</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Mixing & Mastering</h3>
+                    <p>Industry-standard post-production for your tracks.</p>
+                    <span class="price">#110,000 per song</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="details-box">
+            <h3>MULTITRACK PRODUCTION STUDIO</h3>
+            <p>Book our Live Studio for Live Multitrack Recording, Live Streaming, Content and Band Rehearsals.</p>
+            <br>
+            <ul>
+                <li><strong>2 HRS Session:</strong> #50,000</li>
+                <li><strong>4 HRS Session:</strong> #100,000</li>
+                <li><strong>6 HRS Session:</strong> #130,000</li>
+                <li><strong>Space Capacity:</strong> 1 - 10 People</li>
+                <li><strong>Bring Your Own Beat:</strong> #50,000 per song</li>
+            </ul>
+            <div class="note">
+                <strong>Important Note:</strong> This production package does not include video coverage, mixing & mastering or post production- also no smoking or drinking in the studio.
+            </div>
+        </div>
+    </section>
+
+    <section id="dj-services" class="section">
+        <h2>Professional DJ & Events</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&q=80" alt="Performance">
+                <div class="card-content">
+                    <h3>Performance Training</h3>
+                    <p>Professional space for band practice and stage prep.</p>
+                    <span class="price">#35,000 per Session</span>
+                </div>
+            </div>
+            <div class="card">
+                <img src="dj.jpg" alt="DJ">
+                <div class="card-content">
+                    <h3>Professional DJ Services</h3>
+                    <p>Weddings, Ceremonies, Parties, Events, and more.</p>
+                    <span class="price">Contact for Quote</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section" style="background:#050505;">
+        <h2>Get in Touch</h2>
+        <div class="contact-box">
+            <p><strong>Studio Email:</strong> <a href="mailto:jaysimplifiedmusic@gmail.com" class="email-link">jaysimplifiedmusic@gmail.com</a></p>
+            <p><strong>Personal Email:</strong> <a href="mailto:jeremyolayiwolaoni957@gmail.com" class="email-link">jeremyolayiwolaoni957@gmail.com</a></p>
+            <p><strong>WhatsApp:</strong> +234 706 288 1957</p>
+            <br>
+            <a href="http://wa.me/+2347062881957" target="_blank" class="cta-button">Message Us Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Jay Music Studio. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
